@@ -1,26 +1,40 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+	<h1 class="title">Вітаємо в нашому магазині !!!</h1>
+    <div class="cont">
+		<product-item />
+		<currency-selected/>
+		<cart-products/>
+		</div>
+		
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
+import ProductItem from '@/components/ProductItem.vue';
+import CartProducts from '@/components/CartProducts.vue';
+import CurrencySelected from '@/components/CurrencySelected.vue';
 export default {
-  name: "App",
-  components: {
-    HelloWorld,
-  },
-};
+    name: 'App',
+    components: {
+		ProductItem,
+		CurrencySelected,
+		CartProducts
+    },
+    
+}
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
+.cont {
+    max-width: 80%;
+    display: grid;
+	 grid-template-columns: auto auto;
+	 gap: 50px;
+	 margin: 0 auto;
+   
+}
+.title{
+	text-align: center;
+	
 }
 </style>
